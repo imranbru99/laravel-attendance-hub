@@ -1,0 +1,52 @@
+{
+    "name": "imrandevbd/laravel-attendance-hub",
+    "description": "One driver interface. Every attendance device. Auto-detected, auto-connected.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Imran Ahmed",
+            "email": "me@imrandev.bd",
+            "homepage": "https://imrandev.bd",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^10.0|^11.0|^12.0",
+        "illuminate/database": "^10.0|^11.0|^12.0",
+        "illuminate/http": "^10.0|^11.0|^12.0",
+        "illuminate/console": "^10.0|^11.0|^12.0",
+        "illuminate/queue": "^10.0|^11.0|^12.0",
+        "illuminate/events": "^10.0|^11.0|^12.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.0|^9.0|^10.0",
+        "phpunit/phpunit": "^10.0|^11.0"
+    },
+    "suggest": {
+        "filament/filament": "Required to use the Attendance Hub Filament v3 admin panel plugin (^3.0)."
+    },
+    "autoload": {
+        "psr-4": {
+            "ImranDevBd\\AttendanceHub\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "ImranDevBd\\AttendanceHub\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ImranDevBd\\AttendanceHub\\AttendanceHubServiceProvider"
+            ],
+            "aliases": {
+                "AttendanceHub": "ImranDevBd\\AttendanceHub\\Facades\\AttendanceHub"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
